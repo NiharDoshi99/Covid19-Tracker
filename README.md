@@ -1,2 +1,2 @@
 Simple React app for displaying live cases of corona virus cases.
-https://covid19-tracker19.herokuapp.com/
+https://app.netlify.com/sites/determined-beaver-226272/overview
