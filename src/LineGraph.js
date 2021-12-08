@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
 import numeral from "numeral";
+import { CircularProgress } from "@material-ui/core";
 
 const options = {
   legend: {
@@ -85,7 +86,7 @@ function LineGraph({ casesType="cases" , ...props }) {
 
   return (
     <div className={props.className}>
-      {data?.length > 0 && (
+      {data?.length > 0 ? (
         <Line
           data={{
             datasets: [
@@ -98,6 +99,8 @@ function LineGraph({ casesType="cases" , ...props }) {
           }}
           options={options}
         />
+      ) : (
+        <CircularProgress />
       )}
     </div>
   );
